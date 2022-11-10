@@ -1,0 +1,29 @@
+﻿@model LinkViewModel
+@{
+    ViewData["Title"] = "Редактировать URL";
+}
+
+<h3>Редактировать URL</h3>
+
+<div>
+    <form asp-action="EditLink" asp-controller="Home" method="post">
+        <div hidden>
+            <label>
+                <input type="text" asp-for="Id" name="Id" value="@Model.Id">
+            </label>
+        </div>
+        
+        <div>
+            <label asp-for="LongURl">
+                <b>Введите URl <span>*</span></b>
+                <input type="text" asp-for="LongURl" name="LongURl" placeholder="Введите URl" value="@Model.LongURl">
+                <span asp-validation-for="LongURl"></span>
+            </label>
+        </div>
+
+
+        <div class="form-buttons">
+            <button type="submit">Сохранить</button>
+        </div>
+    </form>
+</div>

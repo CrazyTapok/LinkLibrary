@@ -1,0 +1,35 @@
+﻿@model ListLinksViewModel;
+
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Длинный URL</th>
+            <th>Сокращенный URL</th>
+            <th>Дата создания</th>
+            <th>Количество преходов</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in Model.Links)
+            {
+                <tr>
+                    <td>@item.LongURl</td>
+                    <td onclick ="CreateMergeReport()"><a href="/Home/EditCounter/@item.Id">@item.ShortURL</a></td>
+                    <td>@item.Date.ToShortDateString()</td>
+                    <td>@item.VisitsNumber</td>
+                    <td>
+                        <div class="editBtn"><a href="/Home/EditLink/@item.Id">Изменить</a></div>
+
+                        <div class="deleteBtn"><a href="/Home/DeleteLink/@item.Id">Удалить</a></div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

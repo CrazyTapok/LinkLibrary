@@ -1,0 +1,24 @@
+﻿@model LinkViewModel
+
+@{
+    ViewData["Title"] = "Добавить URL";
+}
+
+<h3>Добавить URL</h3>
+
+<div>
+    <form asp-action="CreateLink" asp-controller="Home" method="post">
+        <div>
+            <label asp-for="LongURl">
+                <b>Введите URl <span>*</span></b>
+                <input type="text" asp-for="LongURl" name="LongURl" placeholder="Введите URl">
+                <span asp-validation-for="LongURl"></span>
+            </label>
+        </div>
+
+
+        <div class="form-buttons">
+            <button type="submit">Добавить</button>
+        </div>
+    </form>
+</div>

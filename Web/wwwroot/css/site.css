@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+nav{
+    padding: 15px 30px;
+    background-color: #2F3435;
+    color: #fff
+
+}
+
+nav > div,
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.navbar > div:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+ion-icon{
+    font-size: 30px;
+}
+
+.navbar .myBtn {
+    padding: 7px;
+    border-bottom: 2px solid #2F3435;
+}
+
+.navbar .myBtn:hover {
+    border-bottom: 2px solid #F79C19;
+}
+
+.navbar a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.container {
+    margin-top: 30px
+}
+
+.table{
+    margin: auto;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #d8d8d8;
+    font-size: 18px;
+}
+
+.table tbody ion-icon {
+    font-size: 18px
+}
+
+
+.table thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+
+.table thead tr th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+
+.table tbody td {
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    vertical-align: top;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f3f3f3;
+}
+
+.table tbody tr td:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+
+.table tbody tr td:last-child {
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px
+}
+
+
+.table .editBtn,
+.table .deleteBtn{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.table .editBtn a,
+.table .deleteBtn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.table .editBtn {
+    border: 2px solid #1D4851;
+    background: #1D4851;
+}
+
+.table .editBtn:hover,
+.table .deleteBtn:hover
+{
+    background: #fff;
+}
+
+.table .editBtn:hover a{
+    color: #1D4851;
+}
+
+.table .deleteBtn {
+    border: 2px solid #FF4701;
+    background: #FF4701;
+}
+
+    .table .deleteBtn:hover a {
+        color: #FF4701;
+    }
+
+.footer{
+    position:absolute;
+    bottom: 0;
+}
+
+.footer > div {
+    width: 80%;
+    margin: auto;
+}
+
+h3{
+    text-align:center;
+    margin: 30px 0;
+    font-size: 30px;
+}
+
+form{
+    width: 30%;
+    margin: auto;
+}
+
+form input{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    outline: none;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #98A0AD;
+}
+
+form input:focus{
+    border: 1px solid #1D4851;
+}
+
+form input:focus + span{
+    display:none;
+}
+
+.form div:not(div:last-of-type) {
+    padding-bottom: 20px;
+}
+
+.form b{
+    padding-left: 7px;
+    color: #030235;
+}
+
+.form-buttons{
+    margin-top: 20px;
+}
+
+.form-buttons button{
+    width: 100%;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 3px solid #1D4851;
+    background: #1D4851;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-buttons button:hover{
+    color: #1D4851;
+    background: #fff;
+}
+
+.field-validation-error {
+    color: #FF4701;
+}
+
+input.input-validation-error {
+    border: 1px solid #FF4701;
+}
+
+input.valid {
+    border: 1px solid #FF4701;
+}
+
+.validation-summary-errors {
+    color: #FF4701;
+}
