@@ -3,7 +3,6 @@ using System;
 using Data.EF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -18,15 +17,13 @@ namespace Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.0")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Data.Entities.Link", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("Date")
                         .HasMaxLength(20)
@@ -34,11 +31,11 @@ namespace Data.Migrations
 
                     b.Property<string>("LongURl")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("ShortURL")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("VisitsNumber")
                         .HasColumnType("int");
@@ -50,16 +47,16 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("51baed5b-7c28-4f1c-a698-f1f11f1cf768"),
-                            Date = new DateTime(2022, 11, 10, 13, 33, 58, 568, DateTimeKind.Local).AddTicks(9261),
+                            Id = new Guid("611380c0-85ef-4855-9d14-547c02370888"),
+                            Date = new DateTime(2022, 11, 13, 17, 42, 0, 999, DateTimeKind.Local).AddTicks(4299),
                             LongURl = "https://learn.javascript.ru/",
                             ShortURL = "learn.javascript.ru",
                             VisitsNumber = 0
                         },
                         new
                         {
-                            Id = new Guid("d6a99653-0dc8-41c6-b492-076ec98ff360"),
-                            Date = new DateTime(2022, 11, 10, 13, 33, 58, 568, DateTimeKind.Local).AddTicks(9271),
+                            Id = new Guid("595110a0-c68d-4839-8829-5ed18a50ef8c"),
+                            Date = new DateTime(2022, 11, 13, 17, 42, 0, 999, DateTimeKind.Local).AddTicks(4311),
                             LongURl = "https://metanit.com/sharp/",
                             ShortURL = "metanit.com/sharp",
                             VisitsNumber = 0
